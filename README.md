@@ -8,7 +8,7 @@ At the end of the course, Andrew challenged students to complete an app on their
 
 So here it is! RecipeEase! The app uses modern JavaScript OOP along with Babel and Webpack. 
 
-![Settings Window]()
+![Settings Window](../public/images/concept-sketch-1.png)
 
 ![Settings Window]()
 
