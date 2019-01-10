@@ -1,4 +1,4 @@
-#RecipeEase
+# RecipeEase
 
 This project was a challenge idea once completing Andrew Mead's Modern JavaScript tutorial.
 
