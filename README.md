@@ -7,3 +7,13 @@ We first created a guided Hangman app then moved on to Notes and Todos apps wher
 At the end of the course, Andrew challenged students to complete an app on their own. The challenge was recipe app which combined what we learned from the course.
 
 So here it is! RecipeEase! The app uses modern JavaScript OOP along with Babel and Webpack. 
+
+![Settings Window]()
+
+![Settings Window]()
+
+![Settings Window]()
+
+![Settings Window]()
+
+![Settings Window]()
