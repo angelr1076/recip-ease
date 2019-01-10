@@ -12,8 +12,6 @@ So here it is! RecipeEase! The app uses modern JavaScript OOP along with Babel a
 
 ![Settings Window](./public/images/concept-sketch-2.png)
 
-![Settings Window](./public/mise.jpeg)
-
 ![Settings Window](./public/images/recipe-page.png)
 
 ![Settings Window](./public/images/screencap-1.png)
