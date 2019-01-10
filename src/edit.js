@@ -80,7 +80,7 @@ const ingredientSummary = (recipe) => {
     } else {
         message = `some`
     }
-    return `You have ${message} of ingredients for this recipe`
+    return `You have ${message} ingredients for this recipe`
 }
 
 const generateIngredientDOM = (ingredient) => {
