@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <title>Recipe Book pg. 2</title>
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+        <link href="/images/logo.png" rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">RecipEase</h1>
+                <h2 class="header__subtitle">Your on the go recipe book</h2>
+            </div>
+        </header>
+        
+        <div class="actions">
+            <div class="actions__container actions__container--spaced">
+                <a href="/index.html">Return to recipes</a>
+                <span id="last-updated"></span>
+            </div>
+        </div>
+
+        <section class="recipe-section">
+        <div class="container">
+            <span id="recipe-status" class="list-ingredients"></span>
+            <input id="recipe-title" class="title-input" placeholder="recipe title">
+            <textarea id="recipe-body" class="body-input" placeholder="Enter recipe instructions">
+            </textarea> 
+        </div>
+        </section>
+        
+        <section>
+        <div class="container">
+            <form id="new-ingredient" class="ingredient-container">
+                <input type="text" class="input" placeholder="Ingredient name" name="text">
+                <button class="button">Add Ingredient</button>
+            </form>
+
+            <span id="ingredients-display">
+            </span>
+
+            <button id="add-recipe" class="button button--primary">Add recipe</button>
+            <button id="remove-recipe" class="button button--spaced">Remove recipe</button>
+        </section>
+        
+        <script src="/scripts/edit-bundle.js"></script>
+    </body>
+</html>
