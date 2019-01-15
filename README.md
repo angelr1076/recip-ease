@@ -19,3 +19,5 @@ To run the project locally, clone it, unzip and run "npm start".
 
 ![Settings Window](./public/images/screencap2.png)
 
+![Settings Window](./public/images/home-page.png)
+
