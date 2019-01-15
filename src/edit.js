@@ -12,6 +12,8 @@ const recipeStatus = document.querySelector('#recipe-status')
 const recipeId = location.hash.substring(1)
 const recipeOnPage = getRecipes().find((item) => item.id === recipeId)
 
+initializeEditPage(recipeId)
+
 titleElement.addEventListener('input', (e) => {
     const recipe = updateRecipe(recipeId, {
         title: e.target.value
@@ -45,7 +47,6 @@ addIngredient.addEventListener('submit', (e) => {
         e.target.elements.text.value = ''
     }
     renderIngredients(recipeId)
-    saveRecipes()
 })
 
 const removeIngredient = (text) => {
@@ -53,7 +54,6 @@ const removeIngredient = (text) => {
     if (ingredientIndex > -1) {
         recipeOnPage.ingredients.splice(ingredientIndex, 1)
     }
-    saveRecipes()
     renderIngredients(recipeId)
 }
 
@@ -125,7 +125,7 @@ const generateIngredientDOM = (ingredient) => {
 
 const renderIngredients = (recipeId) => {
     // Grab the ingredient display from the DOM
-    let ingredientList = document.querySelector('#ingredients-display')
+    const ingredientList = document.querySelector('#ingredients-display')
     ingredientList.innerHTML = "";
     const recipe = getRecipes().find((item) => {
         return item.id === recipeId
