@@ -12,8 +12,6 @@ const recipeStatus = document.querySelector('#recipe-status')
 const recipeId = location.hash.substring(1)
 const recipeOnPage = getRecipes().find((item) => item.id === recipeId)
 
-initializeEditPage(recipeId)
-
 titleElement.addEventListener('input', (e) => {
     const recipe = updateRecipe(recipeId, {
         title: e.target.value
@@ -46,8 +44,8 @@ addIngredient.addEventListener('submit', (e) => {
         createIngredient(recipeId, text)
         e.target.elements.text.value = ''
     }
+    renderIngredients(recipeId)
     saveRecipes()
-    location.reload('/edit.html')
 })
 
 const removeIngredient = (text) => {
@@ -56,7 +54,7 @@ const removeIngredient = (text) => {
         recipeOnPage.ingredients.splice(ingredientIndex, 1)
     }
     saveRecipes()
-    location.reload('/edit.html')
+    renderIngredients(recipeId)
 }
 
 const toggleIngredient = (text) => {
@@ -100,6 +98,12 @@ const generateIngredientDOM = (ingredient) => {
     checkbox.setAttribute('type', 'checkbox')
     checkbox.checked = ingredient.included
     containerEl.appendChild(checkbox)
+    // Create checkbox button in ingredient div
+    checkbox.addEventListener('click', () => {
+        toggleIngredient(ingredient.text)
+        saveRecipes()
+        renderIngredients(recipeId)
+    })
 
     // Setup ingredient text
     ingredientText.textContent = ingredient.text
@@ -109,41 +113,30 @@ const generateIngredientDOM = (ingredient) => {
     removeButton.textContent = 'remove'
     removeButton.classList.add('button', 'button--text')
     ingredientEl.appendChild(removeButton)
-
     // Create remove button in ingredient div
     removeButton.addEventListener('click', () => {
         removeIngredient(ingredient.text)
         saveRecipes()
-        generateIngredientDOM(ingredient)
+        renderIngredients(recipeId)
     }) 
-    // Create checkbox button in ingredient div
-    checkbox.addEventListener('click', () => {
-        toggleIngredient(ingredient.text)
-        saveRecipes()
-        location.reload('./edit.html')
-    })
-
+    
     return ingredientEl
 }
 
 const renderIngredients = (recipeId) => {
     // Grab the ingredient display from the DOM
-    const ingredientList = document.querySelector('#ingredients-display')
+    let ingredientList = document.querySelector('#ingredients-display')
+    ingredientList.innerHTML = "";
     const recipe = getRecipes().find((item) => {
         return item.id === recipeId
     })
 
-    // Iterate through the list of ingredients on teh page and render all items from recipeDOM
-    recipe.ingredients.forEach((ingredient) => {
+    // Iterate through the list of ingredients on the page and render all items from recipeDOM
+    recipe.ingredients.map((ingredient) => {
         const recipeDOM = generateIngredientDOM(ingredient)
         ingredientList.appendChild(recipeDOM)
     })
+    saveRecipes()
 }
 
 renderIngredients(recipeId)
-
-window.addEventListener('storage', (e) => {
-    if (e.key === 'recipes') {
-        initializeEditPage(recipeId)
-    }
-})

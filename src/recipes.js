@@ -17,7 +17,6 @@ const loadRecipes = () => {
 // Expose recipes from module
 const getRecipes = () => recipes
 
-
 const createRecipe = () => {
     const id = uuidv4()
     const timestamp = moment().valueOf()
@@ -89,4 +88,4 @@ const createIngredient = (id, text) => {
 
 recipes = loadRecipes()
 
-export { getRecipes, createRecipe, removeRecipe, updateRecipe, saveRecipes, cleanSlate, createIngredient }
+export { getRecipes, createRecipe, removeRecipe, updateRecipe, saveRecipes, cleanSlate, createIngredient, loadRecipes }
