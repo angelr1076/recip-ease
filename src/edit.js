@@ -72,7 +72,7 @@ const ingredientSummary = (recipe) => {
     const allChecked = recipeOnPage.ingredients.every((ingredient) => ingredient.included === true)
 
     if (allUnchecked) {
-        message = `none`
+        message = `no`
     } else if (allChecked) {
         message = `all`
     } else {

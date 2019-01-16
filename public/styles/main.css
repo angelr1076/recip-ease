@@ -4,6 +4,7 @@
     --comfortaa-font: 'Comfortaa', cursive;
     --righteous-font: 'Righteous', cursive;
     --lobster-font: 'Lobster Two', cursive;
+    --cool-font: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 * {
@@ -11,6 +12,8 @@
     margin: 0;
     padding: 0;
     font-family: var(--comfortaa-font);
+    letter-spacing: 0.1rem;
+    font-weight: 900;
 }
 
 html {
@@ -31,9 +34,10 @@ input {
 body {
     background-color: #111010;
     font-size: 1.6rem;
-    background-image: url("https://images.unsplash.com/photo-1518291344630-4857135fb581?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-    background-position: center;
+    background-image: url("https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
+    min-height: 100vh;
+    text-align: center;
 }
 
 button {
@@ -61,12 +65,13 @@ a {
 /* Header */
 
 .header {
-    background-image: url("https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+    background-image: url("https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-position: center;
-    background-size: auto;
     color: white;
     padding: 1.6rem 0;
     text-align: center;
+    background-size: cover;
+    min-height: 25vh;
 }
 
 .header__title {
