@@ -45,8 +45,12 @@ button {
 }
 
 a {
-    color: #396684;
-    border-bottom: 1px solid transparent;
+    color: #d84113;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #092131;
 }
 
 /* Container */
@@ -59,7 +63,7 @@ a {
 
 /* Recipe Container */
 .recipe-section {
-    margin-bottom: 5%;
+    margin-bottom: 3.4rem;
 }
 
 /* Header */
