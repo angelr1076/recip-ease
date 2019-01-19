@@ -8,7 +8,9 @@ At the end of the course, Andrew challenged students to complete an app from wha
 
 So here it is! RecipeEase! The app uses modern JavaScript OOP along with Babel and Webpack. 
 
-To run the project locally, clone it, unzip and run "npm start". 
+To run the project locally, clone it, unzip it and run "npm run dev-server". 
+
+The project is hosted on Firebase.
 
 **Concept drawings using Balsamiq**
 ![Settings Window](./public/images/concept-sketch-1.png)
