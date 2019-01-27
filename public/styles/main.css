@@ -50,7 +50,7 @@ a {
 }
 
 a:hover {
-    color: #092131;
+    color: #eef2f5;
 }
 
 /* Container */
@@ -274,6 +274,13 @@ a:hover {
 .list-item__title {
     font-size: 1.8rem;
     margin-bottom: .4rem
+}
+
+.list-item__ingredient {
+    font-size: 1.4rem;
+    border-left: 1px dashed white;
+    border-right: 1px dashed white;
+    padding: 1rem;
 }
 
 .list-item__subtitle {

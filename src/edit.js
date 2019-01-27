@@ -60,10 +60,9 @@ const removeIngredient = text => {
     ingredient => ingredient.text === text
   )
   if (ingredientIndex > -1) {
-    const ingredientList = recipeOnPage.ingredients
-    ingredientList.splice(ingredientIndex, 1)
+    const allIngredients = recipeOnPage.ingredients
+    allIngredients.splice(ingredientIndex, 1)
   }
-  renderIngredients(recipeId)
 }
 
 const toggleIngredient = text => {
@@ -77,7 +76,7 @@ const toggleIngredient = text => {
   }
 }
 
-const ingredientSummary = recipe => {
+const ingredientSummary = recipeOnPage => {
   let message
   const allUnchecked = recipeOnPage.ingredients.every(
     ingredient => ingredient.included === false
@@ -87,13 +86,13 @@ const ingredientSummary = recipe => {
   )
 
   if (allUnchecked) {
-    message = `no`
+    message = `none`
   } else if (allChecked) {
     message = `all`
   } else {
     message = `some`
   }
-  return `You have ${message} ingredients for this recipe`
+  return `You have ${message} of the ingredients for this recipe`
 }
 
 const generateIngredientDOM = ingredient => {

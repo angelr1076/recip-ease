@@ -7,6 +7,7 @@ const generateRecipeDOM = recipe => {
   const recipeEl = document.createElement('a')
   const textEl = document.createElement('p')
   const statusEl = document.createElement('p')
+  const ingredientEl = document.createElement('label')
 
   // Setup the recipe title text
   if (recipe.title.length > 0) {
@@ -18,6 +19,14 @@ const generateRecipeDOM = recipe => {
   // Add text to the recipe card
   textEl.classList.add('list-item__title')
   recipeEl.appendChild(textEl)
+
+  // Add ingredient to recipe card
+  ingredientEl.classList.add('list-item__ingredient')
+  ingredientEl.textContent = `${recipe.ingredients.length} ingredients so far`
+  if (recipe.ingredients.length === 0) {
+    ingredientEl.textContent = `zero ingredients so far`
+  }
+  recipeEl.appendChild(ingredientEl)
 
   // Setup the link to the recipe edit page
   recipeEl.setAttribute('href', `/edit.html#${recipe.id}`)
@@ -77,7 +86,7 @@ const initializeEditPage = recipeId => {
 
 // Generate the last edited title
 const generateLastEdited = timestamp => {
-  return `Recipe name was changed ${moment(timestamp).fromNow()}`
+  return `Changed ${moment(timestamp).fromNow()}`
 }
 
 export {
