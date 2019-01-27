@@ -22,10 +22,13 @@ const generateRecipeDOM = recipe => {
 
   // Add ingredient to recipe card
   ingredientEl.classList.add('list-item__ingredient')
-  ingredientEl.textContent = `${recipe.ingredients.length} ingredients so far`
-  if (recipe.ingredients.length === 0) {
-    ingredientEl.textContent = `zero ingredients so far`
-  }
+  const plural = recipe.ingredients.length === 1 ? '' : 's'
+  ingredientEl.textContent = `${
+    recipe.ingredients.length
+  } ingredient${plural} so far`
+  recipe.ingredients.length === 0
+    ? (ingredientEl.textContent = `zero ingredients so far`)
+    : ''
   recipeEl.appendChild(ingredientEl)
 
   // Setup the link to the recipe edit page
