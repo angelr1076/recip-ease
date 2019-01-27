@@ -273,7 +273,8 @@ a:hover {
 
 .list-item__title {
     font-size: 1.8rem;
-    margin-bottom: .4rem
+    margin-bottom: .4rem;
+    padding: 1rem;
 }
 
 .list-item__ingredient {
@@ -288,6 +289,7 @@ a:hover {
     font-size: 1.4rem;
     font-weight: 300;
     font-style: italic;
+    padding: 1rem;
 }
 
 .empty-message {

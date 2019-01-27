@@ -8,6 +8,7 @@ const generateRecipeDOM = recipe => {
   const textEl = document.createElement('p')
   const statusEl = document.createElement('p')
   const ingredientEl = document.createElement('label')
+  let recipes = getRecipes().find(item => item === recipe)
 
   // Setup the recipe title text
   if (recipe.title.length > 0) {

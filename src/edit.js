@@ -76,7 +76,7 @@ const toggleIngredient = text => {
   }
 }
 
-const ingredientSummary = recipeOnPage => {
+const ingredientSummary = recipe => {
   let message
   const allUnchecked = recipeOnPage.ingredients.every(
     ingredient => ingredient.included === false
