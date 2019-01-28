@@ -59,6 +59,7 @@ const removeIngredient = text => {
   const ingredientIndex = recipeOnPage.ingredients.findIndex(
     ingredient => ingredient.text === text
   )
+
   if (ingredientIndex > -1) {
     const allIngredients = recipeOnPage.ingredients
     allIngredients.splice(ingredientIndex, 1)
