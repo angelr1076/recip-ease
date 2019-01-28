@@ -17,7 +17,7 @@ The project is hosted on Firebase.
 
 ![Settings Window](./public/images/concept-sketch-2.png)
 
-![Settings Window](./public/images/screencap.png)
+![Settings Window](./public/images/screencap1.png)
 
 ![Settings Window](./public/images/screencap2.png)
 
