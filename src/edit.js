@@ -147,8 +147,8 @@ const renderIngredients = recipeId => {
 
   // Iterate through the list of ingredients on the page and render all items from recipeDOM
   recipe.ingredients.map(ingredient => {
-    const recipeDOM = generateIngredientDOM(ingredient)
-    ingredientList.appendChild(recipeDOM)
+    const ingredientDisplay = generateIngredientDOM(ingredient)
+    ingredientList.appendChild(ingredientDisplay)
   })
   saveRecipes()
 }

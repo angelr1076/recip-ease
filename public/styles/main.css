@@ -12,8 +12,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--comfortaa-font);
-    letter-spacing: 0.1rem;
-    font-weight: 900;
 }
 
 html {
@@ -275,12 +273,13 @@ a:hover {
     font-size: 1.8rem;
     margin-bottom: .4rem;
     padding: 1rem;
+    font-weight: 800;
 }
 
 .list-item__ingredient {
     font-size: 1.4rem;
-    border-left: 1px dashed white;
-    border-right: 1px dashed white;
+    border-left: 3px solid rgb(88, 84, 84);
+    border-right: 3px solid rgb(88, 84, 84);
     padding: 1rem;
 }
 

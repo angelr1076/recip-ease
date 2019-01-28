@@ -24,11 +24,11 @@ const generateRecipeDOM = recipe => {
   // Add ingredient to recipe card
   ingredientEl.classList.add('list-item__ingredient')
   const plural = recipe.ingredients.length === 1 ? '' : 's'
-  ingredientEl.textContent = `${
+  ingredientEl.textContent = `You have ${
     recipe.ingredients.length
-  } ingredient${plural} so far`
+  } ingredient${plural} added to this recipe`
   recipe.ingredients.length === 0
-    ? (ingredientEl.textContent = `zero ingredients so far`)
+    ? (ingredientEl.textContent = `You have zero ingredients added to this recipe`)
     : ''
   recipeEl.appendChild(ingredientEl)
 
