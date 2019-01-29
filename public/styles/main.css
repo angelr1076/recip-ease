@@ -22,11 +22,13 @@ html {
 .body-input {
     background-color: rgb(29, 28, 28);
     color: white;
+    border-radius: 5px;
 }
 
 input {
     background-color: rgb(19, 18, 18);
     color: white;
+    border-radius: 5px;
 }
 
 body {
