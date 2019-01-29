@@ -48,7 +48,7 @@ a {
 }
 
 a:hover {
-    color: #eef2f5;
+    color: #7c7f83;
 }
 
 /* Container */
@@ -212,6 +212,11 @@ a:hover {
     background: none;
     color: rgb(139, 133, 133);
     text-decoration: underline;
+}
+
+.fa-trash-alt {
+    font-size: 2em;
+    color: rgb(219, 3, 3);
 }
 
 /* Recipe editor */

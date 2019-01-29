@@ -125,7 +125,7 @@ const generateIngredientDOM = ingredient => {
   containerEl.appendChild(ingredientText)
 
   // Setup the remove button
-  removeButton.textContent = 'remove'
+  removeButton.innerHTML = '<i class="far fa-trash-alt"></i>'
   removeButton.classList.add('button', 'button--text')
   ingredientEl.appendChild(removeButton)
   // Create remove button in ingredient div
