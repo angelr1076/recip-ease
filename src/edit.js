@@ -56,14 +56,9 @@ addIngredient.addEventListener('submit', e => {
 })
 
 const removeIngredient = text => {
-  const ingredientIndex = recipeOnPage.ingredients.findIndex(
-    ingredient => ingredient.text === text
+  recipeOnPage.ingredients = recipeOnPage.ingredients.filter(
+    item => item.text !== text
   )
-
-  if (ingredientIndex > -1) {
-    const allIngredients = recipeOnPage.ingredients
-    allIngredients.splice(ingredientIndex, 1)
-  }
 }
 
 const toggleIngredient = text => {
