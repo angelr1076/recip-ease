@@ -59,7 +59,7 @@ const renderRecipes = () => {
 
   // If there are recipes, render cards
   if (filteredRecipes.length > 0) {
-    filteredRecipes.forEach(recipe => {
+    filteredRecipes.map(recipe => {
       const recipeEl = generateRecipeDOM(recipe)
       recipesEl.appendChild(recipeEl)
     })

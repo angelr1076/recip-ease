@@ -41,12 +41,8 @@ const saveRecipes = () => {
 
 // Remove a recipe from the list
 const removeRecipe = id => {
-  const recipeIndex = recipes.findIndex(recipe => recipe.id === id)
-
-  if (recipeIndex > -1) {
-    recipes.splice(recipeIndex, 1)
-    saveRecipes()
-  }
+  recipes = recipes.filter(recipe => recipe.id !== id)
+  saveRecipes()
 }
 
 // Remove all recipes from the recipe array
