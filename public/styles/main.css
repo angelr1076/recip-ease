@@ -24,8 +24,7 @@ body {
 
 
 html {
-    font-size: 67.8%;
-    height: 100%;
+    font-size: 62.5%;
 }
 
 .body-input {
@@ -169,6 +168,7 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 800;
     padding: .8rem;
+    margin: 1.2rem;
     transition: background .3s ease;
 }
 
