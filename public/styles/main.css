@@ -2,8 +2,10 @@
 
 :root {
     --comfortaa-font: 'Comfortaa', cursive;
-    --fredoka-font: 'Fredoka One', cursive;
-    --luckiest-font: 'Luckiest Guy', cursive;
+    --ribeye: 'Ribeye Marrow', cursive;
+    --crushed: 'Crushed', cursive;
+    /* --fredoka-font: 'Fredoka One', cursive;
+    --luckiest-font: 'Luckiest Guy', cursive; */
 }
 
 html {
@@ -22,7 +24,6 @@ body {
     linear-gradient(to right, rgb(129, 51, 119), rgb(93, 22, 100), rgb(77, 2, 71)); 
     background-attachment: fixed;
     text-align: center;
-    font-family: var(--comfortaa-font);
 }
 
 .body-input {
@@ -35,19 +36,20 @@ input {
     background-color: rgb(19, 18, 18);
     color: white;
     border-radius: 5px;
+    font-family: var(--ribeye);
 }
 
 button {
     cursor: pointer;
     border-radius: 20px;
-    font-family: var(--comfortaa-font);
+    font-family: var(--ribeye);
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: 0.2rem;
 }
 
 a {
-    font-family: var(--fredoka-font);
+    font-family: var(--crushed);
     text-decoration: none;
     font-size: 2.1rem;
     color: #d84113;
@@ -82,16 +84,16 @@ a:hover {
 }
 
 .header__title {
-    font-family: var(--luckiest-font);
-    font-size: 7rem;
+    font-family: var(--ribeye);
+    font-size: 8rem;
     color: #5a1010;
     margin-bottom: .8rem;
     letter-spacing: .5rem;
 }
 
 .header__subtitle {
-    font-family: var(--fredoka-font);
-    font-size: 2.3rem;
+    font-family: var(--ribeye);
+    font-size: 2.5rem;
     font-weight: 300;
     text-shadow: 2px 3px 10px rgb(22, 17, 17);
 }
@@ -141,7 +143,6 @@ a:hover {
 /* Form Inputs */
 .input {
     border: none;
-    /* border-radius: 20px; */
     width: 70%;
     font-size: 2.2rem;
     font-weight: 600;
@@ -233,7 +234,7 @@ a:hover {
 
 .body-input {
     border: none;
-    font-family: inherit;
+    font-family: var(--ribeye);;
     font-size: 1.8rem;
     font-weight: 300;
     display: block;
@@ -245,11 +246,11 @@ a:hover {
 
 /* Recipe Instructions Item */
 .list-item {
-    font-family: var(--comfortaa-font);
+    font-family: var(--ribeye);
     font-weight: 800;
     text-decoration: none;
     color: #cabfbf;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     cursor: pointer;
     background: rgb(32, 32, 32);
     margin: 1.6rem 0;
@@ -316,6 +317,7 @@ a:hover {
 .list-ingredients {
     display: flex;
     justify-content: center;
+    font-family: var(--ribeye);
     color: rgb(247, 241, 241);
     text-shadow: 3px 4px 8px rgb(31, 28, 28);
     font-size: 1.9rem;
@@ -329,4 +331,5 @@ a:hover {
 
 .time-stamp {
     font-size: 1.5rem;
+    font-family: var(--ribeye);
 }
