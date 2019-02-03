@@ -21,7 +21,7 @@
     <div class="actions">
         <div class="actions__container actions__container--spaced">
             <a href="/index.html">Return to recipes</a>
-            <span id="last-updated"></span>
+            <span id="last-updated" class="time-stamp"></span>
         </div>
     </div>
 
@@ -31,6 +31,9 @@
             <input id="recipe-title" class="title-input" placeholder="recipe title">
             <textarea id="recipe-body" class="body-input" placeholder="Enter recipe instructions">
             </textarea>
+
+            <button id="remove-recipe" class="button button--spaced">Remove recipe</button>
+            <button id="add-recipe" class="button button--primary">Add recipe</button>
         </div>
     </section>
 
@@ -38,14 +41,11 @@
         <div class="container">
             <form id="new-ingredient" class="ingredient-container">
                 <input type="text" class="input" placeholder="Ingredient name" name="text">
-                <button class="button">Add Ingredient</button>
+                <button class="button">Add ingredient</button>
             </form>
 
             <span id="ingredients-display">
             </span>
-
-            <button id="add-recipe" class="button button--primary">Add recipe</button>
-            <button id="remove-recipe" class="button button--spaced">Remove recipe</button>
     </section>
 
     <script src="/scripts/edit-bundle.js"></script>

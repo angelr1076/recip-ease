@@ -40,8 +40,9 @@ input {
 button {
     cursor: pointer;
     border-radius: 20px;
-    font-family: var(--luckiest-font);
+    font-family: var(--comfortaa-font);
     font-size: 2rem;
+    font-weight: 800;
     letter-spacing: 0.2rem;
 }
 
@@ -140,7 +141,7 @@ a:hover {
 /* Form Inputs */
 .input {
     border: none;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     width: 70%;
     font-size: 2.2rem;
     font-weight: 600;
@@ -326,3 +327,6 @@ a:hover {
     padding-bottom: 1.7rem;
 }
 
+.time-stamp {
+    font-size: 1.5rem;
+}
