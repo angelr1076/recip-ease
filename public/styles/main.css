@@ -309,7 +309,10 @@ a:hover {
 }
 
 .empty-message {
+    font-family: var(--ribeye);
+    color: hsla(71, 86%, 48%, 1.0);
     text-align: center;
+    font-size: 3.1rem;
     margin: 3.2rem 0;
 }
 
