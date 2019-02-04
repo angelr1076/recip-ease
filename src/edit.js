@@ -72,12 +72,13 @@ const toggleIngredient = text => {
   }
 }
 
-const ingredientSummary = recipe => {
+const ingredientSummary = () => {
   let message
-  const allUnchecked = recipeOnPage.ingredients.every(
+  const recipeItem = recipeOnPage.ingredients
+  const allUnchecked = recipeItem.every(
     ingredient => ingredient.included === false
   )
-  const allChecked = recipeOnPage.ingredients.every(
+  const allChecked = recipeItem.every(
     ingredient => ingredient.included === true
   )
 
@@ -97,7 +98,7 @@ const generateIngredientDOM = ingredient => {
   const checkbox = document.createElement('input')
   const ingredientText = document.createElement('span')
   const removeButton = document.createElement('button')
-  recipeStatus.textContent = ingredientSummary(recipeOnPage)
+  recipeStatus.textContent = ingredientSummary()
 
   // Setup ingredient container
   ingredientEl.classList.add('list-item')
