@@ -1,13 +1,13 @@
 const filters = {
-  searchText: ''
-}
+  searchText: "",
+};
 
-const getFilters = () => filters
+const getFilters = () => filters;
 
 const setFilters = updates => {
-  if (typeof updates.searchText === 'string') {
-    filters.searchText = updates.searchText
+  if (typeof updates.searchText === "string") {
+    filters.searchText = updates.searchText;
   }
-}
+};
 
-export { getFilters, setFilters }
+export { getFilters, setFilters };

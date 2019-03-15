@@ -1,88 +1,101 @@
-import uuidv4 from 'uuid/v4'
-import moment from 'moment'
+import moment from "moment";
+import uuidv4 from "uuid/v4";
 
-let recipes = []
+let recipes = [];
 
 // Read existing recipes from localStorage
 const loadRecipes = () => {
-  const recipesJSON = localStorage.getItem('recipes')
+  const recipesJSON = localStorage.getItem("recipes");
 
   try {
-    return recipesJSON ? JSON.parse(recipesJSON) : []
+    return recipesJSON ? JSON.parse(recipesJSON) : [];
   } catch (e) {
-    return []
+    return [];
   }
-}
+};
 
 // Expose recipes from module
-const getRecipes = () => recipes
+const getRecipes = () => recipes;
 
 const createRecipe = () => {
-  const id = uuidv4()
-  const timestamp = moment().valueOf()
+  const id = uuidv4();
+  const timestamp = moment().valueOf();
 
   recipes.push({
     id: id,
-    title: '',
-    body: '',
+    title: "",
+    body: "",
     createdAt: timestamp,
     updatedAt: timestamp,
-    ingredients: []
-  })
-  saveRecipes()
+    ingredients: [],
+  });
+  saveRecipes();
 
-  return id
-}
+  return id;
+};
 
 // Save the recipes to localStorage
 const saveRecipes = () => {
-  localStorage.setItem('recipes', JSON.stringify(recipes))
-}
+  localStorage.setItem("recipes", JSON.stringify(recipes));
+};
 
 // Remove a recipe from the list
 const removeRecipe = id => {
-  recipes = recipes.filter(recipe => recipe.id !== id)
-  saveRecipes()
-}
+  recipes = recipes.filter(recipe => recipe.id !== id);
+  saveRecipes();
+};
 
 // Remove all recipes from the recipe array
 const cleanSlate = () => {
-  recipes = []
-  saveRecipes()
-}
+  recipes = [];
+  saveRecipes();
+};
 
 const updateRecipe = (id, updates) => {
-  const recipe = recipes.find(recipe => recipe.id === id)
+  const recipe = recipes.find(recipe => recipe.id === id);
 
   if (!recipe) {
-    return
+    return;
   }
 
-  if (typeof updates.title === 'string') {
-    recipe.title = updates.title
-    recipe.updatedAt = moment().valueOf()
+  if (typeof updates.title === "string") {
+    recipe.title = updates.title;
+    recipe.updatedAt = moment().valueOf();
   }
 
-  if (typeof updates.body === 'string') {
-    recipe.body = updates.body
-    recipe.updateAt = moment().valueOf()
+  if (typeof updates.body === "string") {
+    recipe.body = updates.body;
+    recipe.updateAt = moment().valueOf();
   }
 
-  saveRecipes()
-  return recipe
-}
+  saveRecipes();
+  return recipe;
+};
 
 const createIngredient = (id, text) => {
-  const recipe = recipes.find(recipe => recipe.id === id)
-  const newItem = {
-    text,
-    included: false
-  }
-  recipe.ingredients.push(newItem)
-  saveRecipes()
-}
+  const recipe = recipes.find(recipe => recipe.id === id);
 
-recipes = loadRecipes()
+  const duplicateIngredient = recipe.ingredients.filter(
+    ingredient => ingredient.text === text
+  );
+
+  if (duplicateIngredient.length === 0) {
+    const newItem = {
+      text,
+      included: false,
+    };
+    recipe.ingredients.push(newItem);
+    saveRecipes();
+  } else {
+    const warningMsg = document.querySelector("#ingredient-warning");
+    warningMsg.textContent = "That ingredient already exists.";
+    setTimeout(() => {
+      warningMsg.textContent = "";
+    }, 2500);
+  }
+};
+
+recipes = loadRecipes();
 
 export {
   getRecipes,
@@ -92,5 +105,5 @@ export {
   saveRecipes,
   cleanSlate,
   createIngredient,
-  loadRecipes
-}
+  loadRecipes,
+};
