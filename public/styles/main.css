@@ -343,6 +343,7 @@ a:hover {
   font-size: 2.3rem;
   font-family: var(--ribeye);
   color: rgb(241, 235, 235);
+  background: rgb(202, 2, 2);
   border-radius: 20px;
 }
 

@@ -75,11 +75,11 @@ const updateRecipe = (id, updates) => {
 const createIngredient = (id, text) => {
   const recipe = recipes.find(recipe => recipe.id === id);
 
-  const duplicateIngredient = recipe.ingredients.filter(
+  const duplicateIngredient = recipe.ingredients.find(
     ingredient => ingredient.text === text
   );
 
-  if (duplicateIngredient.length === 0) {
+  if (!duplicateIngredient) {
     const newItem = {
       text,
       included: false,
